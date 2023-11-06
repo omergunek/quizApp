@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-xd-155">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnS-uG-rvk" userLabel="questionText">
+                                        <rect key="frame" x="106.66666666666669" y="0.0" width="177" height="512"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVw-b8-Mf2" userLabel="True">
+                                        <rect key="frame" x="0.0" y="539" width="390" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Y4m-38-mOW"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="True"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p6l-Me-sD7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-xC-kD0" userLabel="False">
+                                        <rect key="frame" x="0.0" y="646" width="390" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="JRD-fW-alf"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="False"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zNW-J3-OZ4"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="1ak-bE-ISy">
+                                        <rect key="frame" x="0.0" y="753" width="390" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="6e5-Ul-lcH"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1ak-bE-ISy" secondAttribute="trailing" id="8Bl-8r-fx6"/>
+                                    <constraint firstAttribute="trailing" secondItem="hB5-xC-kD0" secondAttribute="trailing" id="8cB-6u-vag"/>
+                                    <constraint firstItem="lVw-b8-Mf2" firstAttribute="leading" secondItem="tW7-xd-155" secondAttribute="leading" id="BRc-zL-3az"/>
+                                    <constraint firstItem="1ak-bE-ISy" firstAttribute="leading" secondItem="tW7-xd-155" secondAttribute="leading" id="ZUJ-aK-A7x"/>
+                                    <constraint firstItem="hB5-xC-kD0" firstAttribute="leading" secondItem="tW7-xd-155" secondAttribute="leading" id="iEu-SQ-BMK"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVw-b8-Mf2" secondAttribute="trailing" id="nk7-XN-XGw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tW7-xd-155" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3AM-Rg-KvQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tW7-xd-155" secondAttribute="bottom" id="FyV-IE-NfS"/>
+                            <constraint firstItem="tW7-xd-155" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mab-9e-Sfj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tW7-xd-155" secondAttribute="trailing" id="cQf-Du-fcE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="hB5-xC-kD0" id="MZI-dI-5Ux"/>
+                        <outlet property="progessBar" destination="1ak-bE-ISy" id="ibF-Qn-YHx"/>
+                        <outlet property="questionLabel" destination="LnS-uG-rvk" id="jdI-Th-8yt"/>
+                        <outlet property="trueButton" destination="lVw-b8-Mf2" id="Z7K-1V-Zjs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
